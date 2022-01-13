@@ -45,6 +45,24 @@ body {
     }
 }
 
+#random-color-button {
+    border: none;
+    border-radius: 0.25rem;
+    background-color: rgba(43, 113, 244, 1);
+    transition: background-color 0.25s;
+    color: whitesmoke;
+    padding: 1rem 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+}
+
+#random-color-button:hover {
+    background-color: rgba(43, 113, 244, 0.9);
+    transition: background-color 0.25s;
+}
+
 .red {
     accent-color: red;
 }

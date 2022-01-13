@@ -2,6 +2,7 @@ const redSlider = document.querySelector(".red");
 const greenSlider = document.querySelector(".green");
 const blueSlider = document.querySelector(".blue");
 const colorOutput = document.querySelector(".color-output");
+const randomColorButton = document.querySelector("#random-color-button");
 
 const state = {
     red: redSlider.value,
