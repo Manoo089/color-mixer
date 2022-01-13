@@ -53,8 +53,10 @@ function randomColorApi() {
             }
         })
         .then((data) => {
-            colorOutput.innerHTML = data.color;
-            document.body.style.backgroundColor = data.color;
+            redSlider.value = data.rgb.r;
+            greenSlider.value = data.rgb.g;
+            blueSlider.value = data.rgb.b;
+            handleInputEvent();
         });
 }
 
