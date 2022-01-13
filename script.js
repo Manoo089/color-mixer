@@ -15,6 +15,7 @@ render();
 redSlider.addEventListener("input", handleInputEvent);
 greenSlider.addEventListener("input", handleInputEvent);
 blueSlider.addEventListener("input", handleInputEvent);
+randomColorButton.addEventListener("click", randomColorApi);
 
 function updateState() {
     state.red = redSlider.value;
@@ -42,6 +43,19 @@ function rgbToHex() {
     if (state.blue.length === 1) {
         state.blue = "0" + state.blue;
     }
+}
+
+function randomColorApi() {
+    fetch("https://dummy-apis.netlify.app/api/color")
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then((data) => {
+            colorOutput.innerHTML = data.color;
+            document.body.style.backgroundColor = data.color;
+        });
 }
 
 function render() {
